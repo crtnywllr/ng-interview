@@ -1,4 +1,14 @@
 <h2>Students</h2>
+<input ng-model="searchText" />
 <ul>
-	<li>Here are your students...</li>
+	<li ng-repeat="student in vm.students | filter:searchText"> 
+	     <h4><a ng-click="show = !show">{{ student.FirstName }} {{ student.LastName }}</a></h4>
+         <div class="extraInfo" ng-show="show">
+            <ul>
+                <li>Favorite Color: {{ student.FavoriteColor }}</li>
+                <li>Favorite Food: {{ student.FavoriteFood }}</li>
+                <li>Favorite Movie: {{ student.FavoriteMovie }}</li>
+            </ul>
+        </div>
+	</li>
 </ul>
