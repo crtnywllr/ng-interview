@@ -1,1 +1,19 @@
 /* app css stylesheet */
+.extraInfo {
+  padding: 10px;
+  border:1px solid black;
+  overflow: hidden;
+  transition: all linear 0.5s;
+}
+
+.extraInfo.ng-enter,
+.extraInfo.ng-leave.ng-leave-active {
+  max-height:0;
+  transition: all linear 0.5s;
+}
+
+.extraInfo.ng-leave,
+.extraInfo.ng-enter.ng-enter-active {
+  max-height:5em;
+  transition: all linear 0.5s;
+}
